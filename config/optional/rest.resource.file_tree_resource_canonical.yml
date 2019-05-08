@@ -1,0 +1,18 @@
+uuid: d6d3abc5-680d-40a2-87b0-1c5fe0833e47
+langcode: en
+status: true
+dependencies:
+  module:
+    - dam
+    - serialization
+    - user
+id: file_tree_resource_canonical
+plugin_id: file_tree_resource_canonical
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

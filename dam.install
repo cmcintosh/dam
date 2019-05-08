@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the dam module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function dam_uninstall() {
+  // Delete comment configs.
+  \Drupal::configFactory()->getEditable('taxonomy.vocabulary.file_keywords')->delete();
+  \Drupal::configFactory()->getEditable('core.entity_form_display.comment.file_collection_comment.default')->delete();
+  \Drupal::configFactory()->getEditable('field.field.comment.file_collection_comment.comment_body')->delete();
+  \Drupal::configFactory()->getEditable('comment.type.file_collection_comment')->delete();
+  \Drupal::configFactory()->getEditable('dam.ftp_account_type.default')->delete();
+  \Drupal::configFactory()->getEditable('core.entity_form_display.comment.file_comments.default')->delete();
+
+  // Delete file_managed fields.
+  db_drop_field('file_managed', 'comments');
+  db_drop_field('file_managed', 'file_keywords');
+  db_drop_field('file_managed', 'junk');
+  db_drop_field('file_managed', 'description');
+  db_drop_field('file_managed', 'directory');
+  db_drop_field('file_managed', 'label');
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function dam_requirements($phase) {
+  if ($phase == 'install' || $phase == 'runtime') {
+    $output = shell_exec('service vsftpd status');
+    $status = explode(" ", $output);
+    if (array_search('(running)', $status)) {
+      $sev = REQUIREMENT_INFO;
+      $msg = t("Vsftpd is installed and running on server.");
+      $requirements['dam'] = [
+        'title' => 'Vsftpd',
+        'description' => $msg,
+        'value' => VERSION,
+        'severity' => $sev,
+      ];
+    }
+    else {
+      $sev = REQUIREMENT_ERROR;
+      $msg = t("Vsftpd is not running on server. You have to install and run vsftpd to get the module working.");
+      $requirements['dam'] = [
+        'title' => 'Vsftpd',
+        'description' => $msg,
+        'value' => NULL,
+        'severity' => $sev,
+      ];
+    }
+  }
+  return $requirements;
+}

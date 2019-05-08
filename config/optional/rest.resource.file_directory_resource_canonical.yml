@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - dam
+    - serialization
+    - user
+id: file_directory_resource_canonical
+plugin_id: file_directory_resource_canonical
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

@@ -1,0 +1,6 @@
+dam.overview:
+  route_name: dam.overview
+  parent: system.admin
+  description: 'Digital Assets.'
+  title: Digital Assets
+  weight: -10

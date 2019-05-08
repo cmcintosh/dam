@@ -1,0 +1,21 @@
+file_label_settings:
+  js:
+    assets/scripts/dam_label_settings.behaviors.js: {}
+
+assets_page:
+  js:
+    assets/scripts/dam_assets.behaviors.js: {}
+    bower_components/bootstrap/dist/js/bootstrap.min.js: {}
+    bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.js: {}
+  css:
+    theme:
+      bower_components/bootstrap/dist/css/bootstrap.min.css: {}
+      bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.css: {}
+  dependencies:
+    - global_style
+
+global_style:
+  css:
+    theme:
+      assets/stylesheets/screen.css: {}
+      assets/fonts/font-awesome/font-awesome.css: {}

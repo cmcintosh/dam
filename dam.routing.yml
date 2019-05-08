@@ -1,0 +1,223 @@
+dam.overview:
+  path: '/admin/assets'
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::assets'
+    _title: 'Assets'
+  requirements:
+    _permission: 'access administration pages'
+
+dam.collections:
+  path: '/admin/assets/collections'
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::collections'
+    _title: 'Collections'
+  requirements:
+    _permission: 'access administration pages'
+
+dam.filetree:
+  path: '/dam/filetree'
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::filetree'
+  requirements:
+    _permission: 'access administration pages'
+
+dam.ftp_settings:
+  path: '/admin/assets/ftp'
+  route_name: dam.ftp_settings
+  defaults:
+    _form: '\Drupal\dam\Form\DamFtpSettings'
+    _title: 'FTP Settings'
+  requirements:
+    _permission: 'administer dam'
+
+dam.label_settings:
+  path: '/admin/assets/labels'
+  route_name: dam.label_settings
+  defaults:
+    _form: '\Drupal\dam\Form\DamLabelSettings'
+    _title: 'Label Settings'
+  requirements:
+    _permission: 'administer dam'
+
+dam.ftp_log:
+  path: '/admin/assets/log'
+  route_name: dam.ftp_log
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::log'
+    _title: 'FTP Log'
+  requirements:
+    _permission: 'access administration pages'
+
+file_label_group.settings:
+  path: '/admin/dam/file_label_group/settings'
+  route_name: file_label_group.settings
+  defaults:
+    _form: 'Drupal\dam\Form\FileLabelGroupSettingsForm'
+    _title: 'File Label Group Settings'
+  requirements:
+    _permission: 'administer dam'
+
+file_label.settings:
+  path: '/admin/dam/file_label/settings'
+  route_name: file_label.settings
+  defaults:
+    _form: 'Drupal\dam\Form\FileLabelSettingsForm'
+    _title: 'File Label Settings'
+  requirements:
+    _permission: 'administer dam'
+
+file_directory.settings:
+  path: '/admin/dam/file_directory/settings'
+  route_name: file_directory.settings
+  defaults:
+    _form: 'Drupal\dam\Form\FileDirectorySettingsForm'
+    _title: 'File Directory Settings'
+  requirements:
+    _permission: 'administer dam'
+
+file_extend.settings:
+  path: '/admin/dam/file_extend/settings'
+  route_name: file_extend.settings
+  defaults:
+    _form: 'Drupal\dam\Form\FileExtendSettingsForm'
+    _title: 'Dam File Settings'
+  requirements:
+    _permission: 'administer dam'
+
+file_collection.settings:
+  path: '/admin/dam/file_collection/settings'
+  route_name: file_collection.settings
+  defaults:
+    _form: 'Drupal\dam\Form\FileCollectionSettingsForm'
+    _title: 'File Collection Settings'
+  requirements:
+    _permission: 'administer dam'
+
+dam.files:
+  path: '/system/dam/{scheme}'
+  defaults:
+    _controller: 'Drupal\dam\Controller\FileDownloadController::download'
+    _scheme: dam
+    scheme: dam
+  requirements:
+    _access: 'TRUE'
+
+dam.get_file_download:
+  path: '/system/dam/{filepath}'
+  defaults:
+    _controller: 'Drupal\dam\Controller\FileDownloadController::download'
+    _scheme: dam
+    scheme: dam
+  requirements:
+    # Permissive regex to allow slashes in filepath see
+    # http://symfony.com/doc/current/cookbook/routing/slash_in_parameter.html
+    filepath: .+
+    _access: 'TRUE'
+
+dam.ftp_log_zip:
+  path: '/admin/assets/log/zip'
+  route_name: dam.ftp_log_zip
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::createFTPLogZip'
+    _title: 'FTP Log Zip'
+  requirements:
+    _permission: 'access administration pages'
+
+dam.server_space:
+  path: '/admin/dam/server/space'
+  route_name: dam.server_space
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::damServerSpace'
+    _title: 'Server Space Statistics'
+  requirements:
+    _permission: 'access administration pages'
+
+dam.trash_page:
+  path: '/admin/dam/trash/page'
+  route_name: dam.trash_page
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::getDamJunkFiles'
+    _title: 'Trash Page'
+  requirements:
+    _permission: 'administer dam'
+
+file_system_access.settings:
+  path: '/admin/dam/file_system_access/settings'
+  route_name: file_system_access.settings
+  defaults:
+    _form: 'Drupal\dam\Form\FileSystemAccesslSettingsForm'
+    _title: 'File System Access Settings'
+  requirements:
+    _permission: 'administer dam'
+
+dam.file.comments:
+  path: '/dam/file/comment'
+  route_name: dam.file.comments
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::fileComment'
+    _title: 'File Comment'
+  requirements:
+    _permission: 'administer dam'
+
+dam.file.get.comments:
+  path: '/dam/file/get-comments'
+  route_name: dam.file.get.comments
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::fileGetComments'
+    _title: 'File Get Comments'
+  requirements:
+    _permission: 'administer dam'
+
+dam.delete.file:
+  path: '/dam/file/delete'
+  route_name: dam.delete.file
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::deleteFile'
+    _title: 'Delete File'
+  requirements:
+    _permission: 'administer dam'
+
+dam.update.file_label:
+  path: '/api/file_label'
+  route_name: dam.update.file_label
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::damUpdateFileLabel'
+    _title: 'Update label'
+  requirements:
+    _permission: 'administer dam'
+
+dam.get.file.permissions:
+  path: '/api/file_access'
+  route_name: dam.get.file.permissions
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::getFilePermissions'
+    _title: 'Get File Permission'
+  requirements:
+    _permission: 'administer dam'
+
+dam.set.file.permissions:
+  path: '/api/file_add_access'
+  route_name: dam.set.file.permissions
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::setFilePermissions'
+    _title: 'Set File Permission'
+  requirements:
+    _permission: 'administer dam'
+
+dam.delete.file_system_access:
+  path: '/dam/access/delete'
+  route_name: dam.delete.file_system_access
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::deleteFileSystemAccessEntity'
+    _title: 'Delete File System Access'
+  requirements:
+    _permission: 'administer dam'
+
+dam.add.file_directory:
+  path: '/dam/assets/add-directory'
+  route_name: dam.add.file_directory
+  defaults:
+    _controller: '\Drupal\dam\Controller\DamController::addFileDirectory'
+    _title: 'Add File Directory'
+  requirements:
+    _permission: 'administer dam'

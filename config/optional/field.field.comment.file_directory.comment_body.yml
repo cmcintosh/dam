@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.file_directory
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.file_directory.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: file_directory
+label: Comment
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

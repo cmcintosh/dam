@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: file
+label: 'File Comments'
+target_entity_type_id: file
+description: ''

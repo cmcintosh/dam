@@ -1,0 +1,68 @@
+/**
+* Grid Layouting Styles
+*/
+.grid-container {
+  display: grid;
+  grid-column-gap: 10px;
+}
+
+.label-settings--wrapper {
+  color: #888;
+  font-family: 'Arial';
+  .header {
+    grid-column: auto;
+    .pull-right {
+      grid-column-start: 1;
+      grid-column-end: 1;
+
+      img {
+        width: 100px;
+      }
+    }
+    .pull-center {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      h3 {
+        font-weight: bold;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+    .pull-left {
+      grid-column-start: 4;
+    }
+  }
+
+  input[type="submit"] {
+    font-size: 11px;
+    border: 1px solid gray;
+    color: gray;
+    background: #eee;
+    padding: 5px 10px;
+  }
+
+  .add-group--wrapper, .add-label--wrapper {
+    display: none;
+  }
+}
+
+.label-wrapper .fieldset-wrapper {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
+
+  > div {
+    font-size: 12px;
+  }
+}
+
+.file-label-add-button-wrapper {
+  width: 100%;
+  float:left;
+  clear:both;
+}
+.file-label-add-button {
+  float: right;
+}

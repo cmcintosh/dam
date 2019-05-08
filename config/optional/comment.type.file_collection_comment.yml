@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: file_collection_comment
+label: 'File Collection Comment'
+target_entity_type_id: file_collection
+description: 'Allow commenting on File collection entity.'

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - dam
+    - serialization
+    - user
+id: trash_files_resource_canonical
+plugin_id: trash_files_resource_canonical
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

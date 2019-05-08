@@ -1,0 +1,150 @@
+# File Label routing definition
+file_label.settings_tab:
+  route_name: file_label.settings
+  title: 'Settings'
+  base_route: file_label.settings
+
+entity.file_label.canonical:
+  route_name: entity.file_label.canonical
+  base_route: entity.file_label.canonical
+  title: 'View'
+
+entity.file_label.edit_form:
+  route_name: entity.file_label.edit_form
+  base_route: entity.file_label.canonical
+  title: 'Edit'
+
+entity.file_label.delete_form:
+  route_name:  entity.file_label.delete_form
+  base_route:  entity.file_label.canonical
+  title: 'Delete'
+  weight: 10
+
+# File Label Group routing definition
+file_label_group.settings_tab:
+  route_name: file_label_group.settings
+  title: 'Settings'
+  base_route: file_label_group.settings
+
+entity.file_label_group.canonical:
+  route_name: entity.file_label_group.canonical
+  base_route: entity.file_label_group.canonical
+  title: 'View'
+
+entity.file_label_group.edit_form:
+  route_name: entity.file_label_group.edit_form
+  base_route: entity.file_label_group.canonical
+  title: 'Edit'
+
+entity.file_label_group.delete_form:
+  route_name:  entity.file_label_group.delete_form
+  base_route:  entity.file_label_group.canonical
+  title: 'Delete'
+  weight: 10
+
+# File Directory routing definition
+file_directory.settings_tab:
+  route_name: file_directory.settings
+  title: 'Settings'
+  base_route: file_directory.settings
+
+entity.file_directory.canonical:
+  route_name: entity.file_directory.canonical
+  base_route: entity.file_directory.canonical
+  title: 'View'
+
+entity.file_directory.edit_form:
+  route_name: entity.file_directory.edit_form
+  base_route: entity.file_directory.canonical
+  title: 'Edit'
+
+entity.file_directory.delete_form:
+  route_name:  entity.file_directory.delete_form
+  base_route:  entity.file_directory.canonical
+  title: 'Delete'
+  weight: 10
+
+# File Extend routing definition
+file_extend.settings_tab:
+  route_name: file_extend.settings
+  title: 'Settings'
+  base_route: file_extend.settings
+
+entity.file_extend.canonical:
+  route_name: entity.file_extend.canonical
+  base_route: entity.file_extend.canonical
+  title: 'View'
+
+entity.file_extend.edit_form:
+  route_name: entity.file_extend.edit_form
+  base_route: entity.file_extend.canonical
+  title: 'Edit'
+
+entity.file_extend.delete_form:
+  route_name:  entity.file_extend.delete_form
+  base_route:  entity.file_extend.canonical
+  title: 'Delete'
+  weight: 10
+
+# File Collection routing definition
+file_collection.settings_tab:
+  route_name: file_collection.settings
+  title: 'Settings'
+  base_route: file_collection.settings
+
+entity.file_collection.canonical:
+  route_name: entity.file_collection.canonical
+  base_route: entity.file_collection.canonical
+  title: 'View'
+
+entity.file_collection.edit_form:
+  route_name: entity.file_collection.edit_form
+  base_route: entity.file_collection.canonical
+  title: 'Edit'
+
+entity.file_collection.delete_form:
+  route_name:  entity.file_collection.delete_form
+  base_route:  entity.file_collection.canonical
+  title: 'Delete'
+  weight: 10
+
+# Digital File Assets
+dam.overview:
+  route_name: dam.overview
+  title: 'Digital Assets'
+  base_route: dam.overview
+  weight: -10
+
+dam.ftp_settings:
+  route_name: dam.ftp_settings
+  title: 'FTP Settings'
+  base_route: dam.overview
+  weight: -8
+
+dam.label_settings:
+  route_name: dam.label_settings
+  title: 'Label Settings'
+  base_route: dam.overview
+  weight: -7
+
+# File System Access routing definition
+file_system_access.settings_tab:
+  route_name: file_system_access.settings
+  title: 'FTP Settings'
+  base_route: file_system_access.settings
+
+entity.file_system_access.canonical:
+  route_name: entity.file_system_access.canonical
+  base_route: entity.file_system_access.canonical
+  title: 'View'
+
+entity.file_system_access.edit_form:
+  route_name: entity.file_system_access.edit_form
+  base_route: entity.file_system_access.canonical
+  title: 'Edit'
+
+entity.file_system_access.delete_form:
+  route_name:  entity.file_system_access.delete_form
+  base_route:  entity.file_system_access.canonical
+  title: 'Delete'
+  weight: 10

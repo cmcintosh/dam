@@ -1,0 +1,9 @@
+services:
+  dam.stream_wrapper:
+    class: Drupal\dam\StreamWrapper\DamStreamWrapper
+    tags:
+      - { name: stream_wrapper, scheme: dam }
+  dam.path_processor.files:
+    class: Drupal\dam\PathProcessor\PathProcessorFiles
+    tags:
+      - { name: path_processor_inbound, priority: 200 }

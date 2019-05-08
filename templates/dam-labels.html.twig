@@ -1,0 +1,39 @@
+<div class="label-settings--wrapper grid-container">
+  <div class="header grid-container">
+    <div class="pull-right grid-item">
+      <img src="/modules/custom/dam/assets/img/tag.png" alt="">
+    </div>
+    <div class="pull-center grid-item">
+      <h3>Labels</h3>
+      <p>Create custom labels in to tag your files in ways that makes sense to your workflow.</p>
+    </div>
+    <div class="pull-left grid-item">
+      <button type="button" name="add-group">+ Add Group</button>
+    </div>
+  </div>
+  <div class="label-main-content--wrapper">
+    <div class="add-group--wrapper">
+      {{ form.file_label_group }}
+    </div>
+    <div class="labels-list--wrapper">
+        {% for key, item in form.groups %}
+            {% if key matches '/^\\d+$/' %}
+              <div class="labels--wrapper">
+                <div class="file-label-add-button-wrapper">
+                  <button class="file-label-add-button" type="button" name="add-label">+ Add Label</button>
+                </div>
+                <div class="add-label--wrapper">
+                    {{ item.add_label }}
+                </div>
+
+                {{ item.labels }}
+              </div>
+              {{ item.delete }}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+{{ form | without('groups', 'file_label_group') }}

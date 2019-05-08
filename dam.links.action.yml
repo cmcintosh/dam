@@ -1,0 +1,35 @@
+entity.file_label.add_form:
+  route_name: entity.file_label.add_form
+  title: 'Add File Label'
+  appears_on:
+    - entity.file_label.collection
+
+entity.file_label_group.add_form:
+  route_name: entity.file_label_group.add_form
+  title: 'Add File Label Group'
+  appears_on:
+    - entity.file_label_group.collection
+
+entity.file_directory.add_form:
+  route_name: entity.file_directory.add_form
+  title: 'Add File Directory'
+  appears_on:
+    - entity.file_directory.collection
+
+entity.file_extend.add_form:
+  route_name: entity.file_extend.add_form
+  title: 'Add Dam File'
+  appears_on:
+    - entity.file_extend.collection
+
+entity.file_collection.add_form:
+  route_name: entity.file_collection.add_form
+  title: 'Add File Collection'
+  appears_on:
+    - entity.file_collection.collection
+
+entity.file_system_access.add_form:
+  route_name: entity.file_system_access.add_form
+  title: 'Add File System Access'
+  appears_on:
+    - entity.file_system_access.collection

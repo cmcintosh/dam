@@ -1,0 +1,10 @@
+name: Digital Asset Management
+type: module
+description: 'Defines the core functionality for the Digital Asset management system.'
+package: DAM
+dependencies:
+  - color_field
+  - comment
+core: 8.x
+libraries:
+  - dam/global_style

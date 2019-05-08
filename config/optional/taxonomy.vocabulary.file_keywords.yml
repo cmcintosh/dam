@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'File Keywords'
+vid: file_keywords
+description: 'File Keywords'
+hierarchy: 0
+weight: 0

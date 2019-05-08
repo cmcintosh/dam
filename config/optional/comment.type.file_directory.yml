@@ -1,0 +1,8 @@
+uuid: 59d7d85f-513e-4dd0-bbf7-d843678d79ea
+langcode: en
+status: true
+dependencies: {  }
+id: file_directory
+label: 'File Directory Comments'
+target_entity_type_id: file_directory
+description: ''

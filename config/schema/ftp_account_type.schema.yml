@@ -1,0 +1,12 @@
+dam.ftp_account_type.*:
+  type: config_entity
+  label: 'FTP Account type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

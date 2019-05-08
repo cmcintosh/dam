@@ -1,0 +1,19 @@
+{
+  "name": "dam",
+  "description": "Digital asset manager for drupal",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jqueryfiletree": "^2.1.5",
+    "fontawesome": "^5.3.1",
+    "bootstrap-treeview": "^1.2.0"
+  }
+}
