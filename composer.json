@@ -1,5 +1,5 @@
 {
-    "name": "cmcintosh/dam",
+    "name": "drupal/dam",
     "description": "Digital assets manager for Drupal.",
     "type": "project",
     "authors": [
@@ -16,6 +16,6 @@
     ],
     "require": {
         "php": ">=5.6",
-        "drupal/entity_reference_revisions": "^1.6",
+        "drupal/entity_reference_revisions": "^1.6"
     }
 }
