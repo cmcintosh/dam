@@ -1,2 +1,4 @@
 # Ignore .sass-cache
 assets/.sass-cache
+
+/vendor/

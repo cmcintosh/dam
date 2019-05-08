@@ -1,0 +1,21 @@
+{
+    "name": "cmcintosh/dam",
+    "description": "Digital assets manager for Drupal.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Chris McIntosh",
+            "email": "cmcintosh@wembassy.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "drupal/entity_reference_revisions": "^1.6",
+    }
+}

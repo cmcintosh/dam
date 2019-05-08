@@ -22,13 +22,17 @@ in a standalone DAM system.
 https://www.drupal.org/project/dam
 
 * To submit bug reports and feature suggestions, or to track changes:
-https://www.drupal.org/project/issues/dam
+https://github.com/cmcintosh/dam/issues
 
 
 REQUIREMENTS
 ------------
 
-This module will require that you setup Drupal 8's private file system.
+This module will require that you setup Drupal 8's private file system. Along with several contrib modules.
+  - color_field:color_field
+  - comment:comment
+  - entity_reference_revisions:entity_reference_revisions
+
 
 
 RECOMMENDED MODULES
